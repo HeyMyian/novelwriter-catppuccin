@@ -6,7 +6,6 @@ whiskers:
     - accent
   filename: "themes/catppuccin_{{flavor.identifier}}_{{accent}}.conf"
 ---
-
 [Main]
 name   = Catppuccin {{flavor.name}} {{accent | capitalize}}
 mode   = {% if (flavor.dark) %}dark{% else %}light{% endif %}

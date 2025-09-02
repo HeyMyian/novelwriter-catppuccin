@@ -6,49 +6,57 @@
 </h3>
 
 <p align="center">
-	<a href="https://github.com/catppuccin/template/stargazers"><img src="https://img.shields.io/github/stars/catppuccin/template?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
-	<a href="https://github.com/catppuccin/template/issues"><img src="https://img.shields.io/github/issues/catppuccin/template?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
-	<a href="https://github.com/catppuccin/template/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/template?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+	<a href="https://github.com/heymyian/novelwriter-catppuccin/stargazers"><img src="https://img.shields.io/github/stars/heymyian/novelwriter-catppuccin?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+	<a href="https://github.com/heymyian/novelwriter-catppuccin/issues"><img src="https://img.shields.io/github/issues/heymyian/novelwriter-catppuccin?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
+	<a href="https://github.com/heymyian/novelwriter-catppuccin/contributors"><img src="https://img.shields.io/github/contributors/heymyian/novelwriter-catppuccin?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/preview.webp"/>
+	<img src="assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🌻 Latte</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/latte.webp"/>
+<img src="assets/latte.webp"/>
 </details>
 <details>
 <summary>🪴 Frappé</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/frappe.webp"/>
+<img src="assets/frappe.webp"/>
 </details>
 <details>
 <summary>🌺 Macchiato</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/macchiato.webp"/>
+<img src="assets/macchiato.webp"/>
 </details>
 <details>
 <summary>🌿 Mocha</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/mocha.webp"/>
+<img src="assets/mocha.webp"/>
 </details>
 
 ## Usage
 
 1. Download the flavor of your choice.
-2. Open the app and go to **Preferences** > **Appearance** > **Import theme**.
-3. Select the downloaded flavor file.
+2. Save the file to your local novelWriter themes folder. See also the [novelWriter documentation](https://novelwriter.io/docs/technical/locations.html#application-data).
+The standard paths are:
+    - Linux: `~/.local/share/novelwriter/themes/`
+    - MacOS: `~/Library/Application Support/novelwriter/themes/`
+    - Windows: `C:\Users\<USER>\AppData\Roaming\novelwriter\themes\`  
+   
+2. Restart the novelWriter application.
+3. Go to **Tools** > **Preferences**.
+4. Change the **Light colour theme** and/or **Dark colour theme**.
 
-<!-- The FAQ section is optional. Remove if needed.-->
+<!-- The FAQ section is optional. Remove if needed.
 ## 🙋 FAQ
 
 - Q: **_"How can I do X?"_**\
   A: ...
-
+-->
 ## 💝 Thanks to
 
-- [Human](https://github.com/catppuccin)
+- [Myian](https://github.com/HeyMyian)
+- [vkbo](https://github.com/vkbo)
 
 &nbsp;
 

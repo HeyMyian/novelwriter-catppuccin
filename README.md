@@ -36,7 +36,7 @@
 
 ## Usage
 
-1. Download the flavor of your choice.
+1. Download the file with the flavor and accent of your choice.
 2. Save the file to your local novelWriter themes folder. See also the [novelWriter documentation](https://novelwriter.io/docs/technical/locations.html#application-data).
 The standard paths are:
     - Linux: `~/.local/share/novelwriter/themes/`
@@ -44,8 +44,13 @@ The standard paths are:
     - Windows: `C:\Users\<USER>\AppData\Roaming\novelwriter\themes\`  
    
 2. Restart the novelWriter application.
-3. Go to **Tools** > **Preferences**.
+3. In novelWriter, go to **Tools** > **Preferences**.
 4. Change the **Light colour theme** and/or **Dark colour theme**.
+
+## Notes
+
+- These themes are for novelWriter 2.8 and higher only.
+- The **Latte Mauve** and **Mocha Mauve** flavors are already included in the novelWriter application.
 
 <!-- The FAQ section is optional. Remove if needed.
 ## 🙋 FAQ

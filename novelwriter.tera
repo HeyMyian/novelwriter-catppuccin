@@ -10,25 +10,24 @@ whiskers:
 [Main]
 name   = Catppuccin {{flavor.name}} {{accent | capitalize}}
 mode   = {% if (flavor.dark) %}dark{% else %}light{% endif %}
-author = Myian
-credit = Catppuccin Org
+author = Catppuccin Org
 url    = https://catppuccin.com/
 
 [Base]
-base    = #{{flavor.colors.mantle.hex}}
-default = #{{flavor.colors.text.hex}}
-faded   = #{{flavor.colors.overlay1.hex}}
-red     = #{{flavor.colors.red.hex}}
-orange  = #{{flavor.colors.peach.hex}}
-yellow  = #{{flavor.colors.yellow.hex}}
-green   = #{{flavor.colors.green.hex}}
-cyan    = #{% if (flavor.dark) %}{{flavor.colors.sky.hex}}{% else %}{{flavor.colors.teal.hex}}{% endif %}
-blue    = #{{flavor.colors.blue.hex}}
-purple  = #{{flavor.colors.mauve.hex}}
+base    = #{{mantle.hex}}
+default = #{{text.hex}}
+faded   = #{{overlay1.hex}}
+red     = #{{red.hex}}
+orange  = #{{peach.hex}}
+yellow  = #{{yellow.hex}}
+green   = #{{green.hex}}
+cyan    = #{% if (flavor.dark) %}{{sky.hex}}{% else %}{{teal.hex}}{% endif %}
+blue    = #{{blue.hex}}
+purple  = #{{mauve.hex}}
 
 [Project]
 root     = default
-folder   = #{{flavor.colors.maroon.hex}}
+folder   = #{{maroon.hex}}
 file     = default
 title    = purple
 chapter  = blue
@@ -39,14 +38,14 @@ inactive = red
 disabled = faded
 
 [Palette]
-window          = #{{flavor.colors.crust.hex}}
+window          = #{{crust.hex}}
 windowtext      = default
 base            = base
-alternatebase   = #{{flavor.colors.surface1.hex}}
+alternatebase   = #{{surface1.hex}}
 text            = default
-tooltipbase     = #{% if (flavor.dark) %}{{flavor.colors.subtext1.hex}}{% else %}{{flavor.colors.surface0.hex}}{% endif %}
+tooltipbase     = #{% if (flavor.dark) %}{{subtext1.hex}}{% else %}{{surface0.hex}}{% endif %}
 tooltiptext     = {% if (flavor.dark) %}base{% else %}default{% endif %}
-button          = #{{flavor.colors.base.hex}}
+button          = #{{base.hex}}
 buttontext      = default
 brighttext      = base
 highlight       = #{{flavor.colors[accent].hex}}
@@ -56,18 +55,18 @@ linkvisited     = lavender
 accent          = #{{flavor.colors[accent].hex}}
 
 [GUI]
-helptext  = #{{flavor.colors.overlay2.hex}}
+helptext  = #{{overlay2.hex}}
 fadedtext = faded
 errortext = red
 
 [Syntax]
-background     = #{{flavor.colors.base.hex}}
+background     = #{{base.hex}}
 text           = default
-line           = #{{flavor.colors.surface0.hex}}
+line           = #{{overlay2 | mod(opacity=0.2) | get(key="hex")}}
 link           = blue
-headertext     = #{{flavor.colors.lavender.hex}}
-headertag      = #{{flavor.colors.lavender.hex}}80
-emphasis       = #{{flavor.colors.maroon.hex}}
+headertext     = #{{lavender.hex}}
+headertag      = #{{lavender | mod(opacity=0.5) | get(key="hex")}}
+emphasis       = #{{maroon.hex}}
 dialog         = purple
 altdialog      = blue
 note           = green

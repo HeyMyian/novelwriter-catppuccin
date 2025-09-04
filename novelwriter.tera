@@ -65,18 +65,18 @@ line           = #{{overlay2 | mod(opacity=0.2) | get(key="hex")}}
 link           = blue
 headertext     = #{{lavender.hex}}
 headertag      = #{{lavender | mod(opacity=0.5) | get(key="hex")}}
-emphasis       = #{{maroon.hex}}
+emphasis       = blue
 dialog         = purple
-altdialog      = blue
+altdialog      = #{{pink.hex}}
 note           = green
 hidden         = faded
 shortcode      = cyan
-keyword        = orange
+keyword        = #{{maroon.hex}}
 tag            = yellow
 value          = yellow
 optional       = faded
 spellcheckline = red
 errorline      = green
-replacetag     = blue
+replacetag     = #{{maroon.hex}}
 modifier       = cyan
 texthighlight  = purple:{% if (flavor.dark) %}72{% else %}48{% endif %}

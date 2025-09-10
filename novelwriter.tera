@@ -5,7 +5,11 @@ whiskers:
     - flavor
     - accent
   filename: "themes/catppuccin_{{flavor.identifier}}_{{accent}}.conf"
+  hex_format: "#{{r}}{{g}}{{b}}{{z}}"
 ---
+{%- set white = text | mod(color=text, lightness=100) -%}
+{%- set op1 = if(cond=flavor.dark, t=0.4, f=0.19) -%}
+{%- set op2 = if(cond=flavor.dark, t=0.4, f=0.3) -%}
 [Main]
 name   = Catppuccin {{flavor.name}} {{accent | capitalize}}
 mode   = {% if (flavor.dark) %}dark{% else %}light{% endif %}
@@ -13,20 +17,20 @@ author = Catppuccin Org
 url    = https://catppuccin.com/
 
 [Base]
-base    = #{{mantle.hex}}
-default = #{{text.hex}}
-faded   = #{{overlay1.hex}}
-red     = #{{red.hex}}
-orange  = #{{peach.hex}}
-yellow  = #{{yellow.hex}}
-green   = #{{green.hex}}
-cyan    = #{% if (flavor.dark) %}{{sky.hex}}{% else %}{{teal.hex}}{% endif %}
-blue    = #{{blue.hex}}
-purple  = #{{mauve.hex}}
+base    = {{mantle.hex}}
+default = {{text.hex}}
+faded   = {{overlay1.hex}}
+red     = {{red.hex}}
+orange  = {{peach.hex}}
+yellow  = {{yellow.hex}}
+green   = {{green.hex}}
+cyan    = {{teal.hex}}
+blue    = {{blue.hex}}
+purple  = {{mauve.hex}}
 
 [Project]
 root     = default
-folder   = #{{maroon.hex}}
+folder   = {{maroon.hex}}
 file     = default
 title    = purple
 chapter  = blue
@@ -37,46 +41,46 @@ inactive = red
 disabled = faded
 
 [Palette]
-window          = #{{crust.hex}}
+window          = {{crust.hex}}
 windowtext      = default
 base            = base
-alternatebase   = #{{surface1.hex}}
+alternatebase   = {{surface1.hex}}
 text            = default
-tooltipbase     = #{% if (flavor.dark) %}{{subtext1.hex}}{% else %}{{surface0.hex}}{% endif %}
+tooltipbase     = {{flavor.colors[accent] | mix(color=white, amount=op1) | get(key="hex")}}
 tooltiptext     = {% if (flavor.dark) %}base{% else %}default{% endif %}
-button          = #{{base.hex}}
+button          = {{base | add(saturation=3) | get(key="hex")}}
 buttontext      = default
 brighttext      = base
-highlight       = #{{flavor.colors[accent].hex}}
+highlight       = {{flavor.colors[accent].hex}}
 highlightedtext = base
 link            = blue
 linkvisited     = lavender
-accent          = #{{flavor.colors[accent].hex}}
+accent          = {{flavor.colors[accent].hex}}
 
 [GUI]
-helptext  = #{{overlay2.hex}}
+helptext  = {{overlay2.hex}}
 fadedtext = faded
 errortext = red
 
 [Syntax]
-background     = #{{base.hex}}
+background     = {{base.hex}}
 text           = default
-line           = #{{overlay2 | mod(opacity=0.2) | get(key="hex")}}
+line           = {{overlay2 | mod(opacity=0.2) | get(key="hex")}}
 link           = blue
-headertext     = #{{lavender.hex}}
-headertag      = #{{lavender | mod(opacity=0.5) | get(key="hex")}}
+headertext     = {{lavender.hex}}
+headertag      = {{lavender | mod(opacity=0.5) | get(key="hex")}}
 emphasis       = blue
 dialog         = purple
-altdialog      = #{{pink.hex}}
+altdialog      = {{pink.hex}}
 note           = green
 hidden         = faded
 shortcode      = cyan
-keyword        = #{{maroon.hex}}
+keyword        = {{maroon.hex}}
 tag            = yellow
 value          = yellow
 optional       = faded
 spellcheckline = red
 errorline      = green
-replacetag     = #{{maroon.hex}}
+replacetag     = {{maroon.hex}}
 modifier       = cyan
-texthighlight  = purple:{% if (flavor.dark) %}72{% else %}48{% endif %}
+texthighlight  = {{flavor.colors[accent] | mod(opacity=op2) | get(key="hex")}}

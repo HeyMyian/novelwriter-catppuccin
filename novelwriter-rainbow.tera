@@ -1,0 +1,116 @@
+---
+whiskers:
+  version: "^2.5.1"
+  matrix:
+    - flavor
+    - accent
+  filename: "themes/catppuccin_rainbow_{{flavor.identifier}}_{{accent}}.conf"
+  hex_format: "#{{r}}{{g}}{{b}}{{z}}"
+---
+{%- set white = text | mod(color=text, lightness=100) -%}
+{%- set op1 = if(cond=flavor.dark, t=0.4, f=0.19) -%}
+{%- set op2 = if(cond=flavor.dark, t=0.4, f=0.3) -%}
+{%- if (accent == "lavender") -%}
+  {%- set wheel = [teal, mauve, lavender, sapphire, peach, rosewater, yellow, green] -%}
+{%- elif (accent == "blue") -%}
+  {%- set wheel = [green, teal, blue, lavender, mauve, pink, maroon, yellow] -%}
+{%- elif (accent == "sapphire") -%}
+  {%- set wheel = [green, teal, sapphire, lavender, mauve, pink, maroon, yellow] -%}
+{%- elif (accent == "sky") -%}
+  {%- set wheel = [yellow, green, sky, sapphire, lavender, mauve, pink, maroon] -%}
+{%- elif (accent == "teal") -%}
+  {%- set wheel = [yellow, green, teal, blue, lavender, mauve, pink, maroon] -%}
+{%- elif (accent == "green") -%}
+  {%- set wheel = [yellow, maroon, green, peach, sky, blue, mauve, pink] -%}
+{%- elif (accent == "yellow") -%}
+  {%- set wheel = [peach, pink, yellow, maroon, green, teal, blue, mauve] -%}
+{%- elif (accent == "peach") -%}
+  {%- set wheel = [yellow, red, peach, flamingo, green, sky, blue, mauve] -%}
+{%- elif (accent == "maroon") -%}
+  {%- set wheel = [yellow, pink, maroon, flamingo, green, teal, sapphire, mauve] -%}
+{%- elif (accent == "red") -%}
+  {%- set wheel = [pink, yellow, red, peach, green, teal, blue, mauve] -%}
+{%- elif (accent == "mauve") -%}
+  {%- set wheel = [blue, lavender, mauve, pink, maroon, yellow, green, teal] -%}
+{%- elif (accent == "pink") -%}
+  {%- set wheel = [lavender, mauve, pink, maroon, green, yellow, teal, sapphire] -%}
+{%- elif (accent == "flamingo") -%}
+  {%- set wheel = [mauve, pink, flamingo, maroon, green, yellow, sky, blue] -%}
+{%- elif (accent == "rosewater") -%}
+  {%- set wheel = [maroon, yellow, rosewater, pink, green, teal, blue, mauve] -%}
+{%- endif -%}
+
+[Main]
+name   = Catppuccin Rainbow {{flavor.name}} {{accent | capitalize}}
+mode   = {% if (flavor.dark) %}dark{% else %}light{% endif %}
+author = Catppuccin Org
+url    = https://catppuccin.com
+
+[Base]
+base    = {{mantle.hex}}
+default = {{text.hex}}
+faded   = {{overlay1.hex}}
+red     = {{red.hex}}
+orange  = {{peach.hex}}
+yellow  = {{yellow.hex}}
+green   = {{green.hex}}
+cyan    = {{teal.hex}}
+blue    = {{blue.hex}}
+purple  = {{mauve.hex}}
+
+[Project]
+root     = default
+folder   = {{maroon.hex}}
+file     = default
+title    = purple
+chapter  = blue
+scene    = cyan
+note     = yellow
+active   = green
+inactive = red
+disabled = faded
+
+[Palette]
+window          = {{crust.hex}}
+windowtext      = default
+base            = base
+alternatebase   = {{surface1.hex}}
+text            = default
+tooltipbase     = {{flavor.colors[accent] | mix(color=white, amount=op1) | get(key="hex")}}
+tooltiptext     = {% if (flavor.dark) %}base{% else %}default{% endif %}
+button          = {{base | add(saturation=3) | get(key="hex")}}
+buttontext      = default
+brighttext      = base
+highlight       = {{flavor.colors[accent].hex}}
+highlightedtext = base
+link            = blue
+linkvisited     = lavender
+accent          = {{flavor.colors[accent].hex}}
+
+[GUI]
+helptext  = {{overlay2.hex}}
+fadedtext = faded
+errortext = red
+
+[Syntax]
+background     = {{base.hex}}
+text           = default
+line           = {{overlay2 | mod(opacity=0.2) | get(key="hex")}}
+link           = blue
+headertext     = {{wheel[1].hex}}
+headertag      = {{wheel[1] | mod(opacity=0.5) | get(key="hex")}}
+emphasis       = {{wheel[0].hex}}
+dialog         = {{wheel[2].hex}}
+altdialog      = {{wheel[3].hex}}
+note           = {{wheel[6].hex}}
+hidden         = faded
+shortcode      = {{wheel[7].hex}}
+keyword        = {{wheel[4].hex}}
+tag            = {{wheel[5].hex}}
+value          = {{wheel[5].hex}}
+optional       = faded
+spellcheckline = red
+errorline      = green
+replacetag     = {{wheel[4].hex}}
+modifier       = {{wheel[7].hex}}
+texthighlight  = {{flavor.colors[accent] | mod(opacity=op2) | get(key="hex")}}

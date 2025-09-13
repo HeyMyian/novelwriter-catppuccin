@@ -9,21 +9,20 @@ whiskers:
 ---
 {%- set white = text | mod(color=text, lightness=100) -%}
 {%- set op1 = if(cond=flavor.dark, t=0.4, f=0.19) -%}
-{%- set op2 = if(cond=flavor.dark, t=0.4, f=0.3) -%}
 {%- if (accent == "lavender") -%}
   {%- set wheel = [teal, mauve, lavender, sapphire, peach, rosewater, yellow, green] -%}
 {%- elif (accent == "blue") -%}
   {%- set wheel = [green, teal, blue, lavender, mauve, pink, maroon, yellow] -%}
 {%- elif (accent == "sapphire") -%}
-  {%- set wheel = [green, teal, sapphire, lavender, mauve, pink, maroon, yellow] -%}
+  {%- set wheel = [green, teal, sapphire, sky, mauve, pink, maroon, yellow] -%}
 {%- elif (accent == "sky") -%}
-  {%- set wheel = [yellow, green, sky, sapphire, lavender, mauve, pink, maroon] -%}
+  {%- set wheel = [green, pink, sky, blue, peach, yellow, maroon, mauve] -%}
 {%- elif (accent == "teal") -%}
-  {%- set wheel = [yellow, green, teal, blue, lavender, mauve, pink, maroon] -%}
+  {%- set wheel = [yellow, green, teal, sapphire, blue, mauve, pink, maroon] -%}
 {%- elif (accent == "green") -%}
   {%- set wheel = [yellow, maroon, green, peach, sky, blue, mauve, pink] -%}
 {%- elif (accent == "yellow") -%}
-  {%- set wheel = [peach, pink, yellow, maroon, green, teal, blue, mauve] -%}
+  {%- set wheel = [peach, pink, yellow, maroon, green, sky, blue, mauve] -%}
 {%- elif (accent == "peach") -%}
   {%- set wheel = [yellow, red, peach, flamingo, green, sky, blue, mauve] -%}
 {%- elif (accent == "maroon") -%}
@@ -35,9 +34,9 @@ whiskers:
 {%- elif (accent == "pink") -%}
   {%- set wheel = [lavender, mauve, pink, maroon, green, yellow, teal, sapphire] -%}
 {%- elif (accent == "flamingo") -%}
-  {%- set wheel = [mauve, pink, flamingo, maroon, green, yellow, sky, blue] -%}
+  {%- set wheel = [mauve, pink, flamingo, maroon, teal, green, sky, blue] -%}
 {%- elif (accent == "rosewater") -%}
-  {%- set wheel = [maroon, yellow, rosewater, pink, green, teal, blue, mauve] -%}
+  {%- set wheel = [maroon, yellow, rosewater, pink, green, sky, blue, mauve] -%}
 {%- endif -%}
 
 [Main]
@@ -113,4 +112,4 @@ spellcheckline = red
 errorline      = green
 replacetag     = {{wheel[4].hex}}
 modifier       = {{wheel[7].hex}}
-texthighlight  = {{flavor.colors[accent] | mod(opacity=op2) | get(key="hex")}}
+texthighlight  = {{flavor.colors[accent] | mod(opacity=0.3) | get(key="hex")}}

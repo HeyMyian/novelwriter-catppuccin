@@ -9,7 +9,6 @@ whiskers:
 ---
 {%- set white = text | mod(color=text, lightness=100) -%}
 {%- set op1 = if(cond=flavor.dark, t=0.4, f=0.19) -%}
-{%- set op2 = if(cond=flavor.dark, t=0.4, f=0.3) -%}
 [Main]
 name   = Catppuccin {{flavor.name}} {{accent | capitalize}}
 mode   = {% if (flavor.dark) %}dark{% else %}light{% endif %}
@@ -83,4 +82,4 @@ spellcheckline = red
 errorline      = green
 replacetag     = {{maroon.hex}}
 modifier       = cyan
-texthighlight  = {{flavor.colors[accent] | mod(opacity=op2) | get(key="hex")}}
+texthighlight  = {{flavor.colors[accent] | mod(opacity=0.3) | get(key="hex")}}

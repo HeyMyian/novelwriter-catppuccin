@@ -82,4 +82,4 @@ spellcheckline = red
 errorline      = green
 replacetag     = {{maroon.hex}}
 modifier       = cyan
-texthighlight  = {{flavor.colors[accent] | mod(opacity=0.3) | get(key="hex")}}
+texthighlight  = {{flavor.colors[accent] | mod(opacity=0.2825) | get(key="hex")}}

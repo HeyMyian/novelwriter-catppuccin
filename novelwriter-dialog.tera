@@ -40,7 +40,7 @@ whiskers:
 {%- endif -%}
 
 [Main]
-name   = Catppuccin Rainbow {{flavor.name}} {{accent | capitalize}} Dialog
+name   = Catppuccin {{flavor.name}} {{accent | capitalize}} Dialog
 mode   = {% if (flavor.dark) %}dark{% else %}light{% endif %}
 author = Catppuccin Org
 url    = https://catppuccin.com

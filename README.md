@@ -34,6 +34,12 @@
 <img src="assets/mocha.webp"/>
 </details>
 
+## Variations
+
+The normal accent variations change only the color of selections. All have *mauve* dialog color.
+
+In the `dialog` variations, the accent color determines the color of selections as well as dialog. All other syntax highlighting colors are cycled around to maintain contrast.
+
 ## Usage
 
 1. Download the file with the flavor and accent of your choice.
@@ -44,20 +50,14 @@ The standard paths are:
     - Windows: `C:\Users\<USER>\AppData\Roaming\novelwriter\themes\`  
    
 2. Restart the novelWriter application.
-3. In novelWriter, go to **Tools** > **Preferences**.
-4. Change the **Light colour theme** and/or **Dark colour theme**.
+3. In novelWriter, go to **Tools** > **Preferences** (default hotkey <kbd>Ctrl</kbd> + <kbd>,</kbd>)
+4. Change the **Light color theme** and/or **Dark color theme**.
 
 ## Notes
 
-- These themes are for novelWriter 2.8 and higher only.
+- These themes are for novelWriter 2.8 and later only.
 - The **Latte Mauve** and **Mocha Mauve** flavors are already included in the novelWriter application.
 
-<!-- The FAQ section is optional. Remove if needed.
-## 🙋 FAQ
-
-- Q: **_"How can I do X?"_**\
-  A: ...
--->
 ## 💝 Thanks to
 
 - [Myian](https://github.com/HeyMyian)

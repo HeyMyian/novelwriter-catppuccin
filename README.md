@@ -50,7 +50,7 @@ The standard paths are:
     - Windows: `C:\Users\<USER>\AppData\Roaming\novelwriter\themes\`  
    
 2. Restart the novelWriter application.
-3. In novelWriter, go to **Tools** > **Preferences** (default hotkey <kbd>Ctrl</kbd> + <kbd>,</kbd>)
+3. In novelWriter, go to **Tools** > **Preferences**. The default hotkey is: <kbd>Ctrl</kbd> + <kbd>,</kbd>
 4. Change the **Light color theme** and/or **Dark color theme**.
 
 ## Notes

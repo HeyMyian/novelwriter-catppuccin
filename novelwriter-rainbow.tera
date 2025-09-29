@@ -10,37 +10,37 @@ whiskers:
 {%- set white = text | mod(color=text, lightness=100) -%}
 {%- set op1 = if(cond=flavor.dark, t=0.4, f=0.19) -%}
 {%- if (accent == "lavender") -%}
-  {%- set wheel = [teal, mauve, lavender, sapphire, peach, rosewater, yellow, green] -%}
+  {%- set wheel = [sapphire, mauve, lavender, teal, peach, yellow, rosewater, green] -%}
 {%- elif (accent == "blue") -%}
-  {%- set wheel = [green, teal, blue, lavender, mauve, pink, maroon, yellow] -%}
+  {%- set wheel = [green, teal, blue, lavender, mauve, yellow, pink, red] -%}
 {%- elif (accent == "sapphire") -%}
-  {%- set wheel = [green, teal, sapphire, sky, mauve, pink, maroon, yellow] -%}
+  {%- set wheel = [green, teal, sapphire, sky, mauve, yellow, pink, maroon] -%}
 {%- elif (accent == "sky") -%}
-  {%- set wheel = [green, pink, sky, blue, peach, yellow, maroon, mauve] -%}
+  {%- set wheel = [green, pink, sky, blue, peach, yellow, mauve, red] -%}
 {%- elif (accent == "teal") -%}
-  {%- set wheel = [yellow, green, teal, sapphire, blue, mauve, pink, maroon] -%}
+  {%- set wheel = [pink, sapphire, teal, green, blue, yellow, red, mauve] -%}
 {%- elif (accent == "green") -%}
-  {%- set wheel = [yellow, maroon, green, peach, sky, blue, mauve, pink] -%}
+  {%- set wheel = [sapphire, pink, green, sky, mauve, yellow, rosewater, red] -%}
 {%- elif (accent == "yellow") -%}
-  {%- set wheel = [peach, pink, yellow, maroon, green, sky, blue, mauve] -%}
+  {%- set wheel = [peach, pink, yellow, maroon, sky, green, blue, mauve] -%}
 {%- elif (accent == "peach") -%}
-  {%- set wheel = [yellow, red, peach, flamingo, green, sky, blue, mauve] -%}
+  {%- set wheel = [yellow, pink, peach, flamingo, blue, sky, green, mauve] -%}
 {%- elif (accent == "maroon") -%}
-  {%- set wheel = [yellow, pink, maroon, flamingo, green, teal, sapphire, mauve] -%}
+  {%- set wheel = [yellow, pink, maroon, flamingo, blue, sky, green, mauve] -%}
 {%- elif (accent == "red") -%}
-  {%- set wheel = [pink, yellow, red, peach, green, teal, blue, mauve] -%}
+  {%- set wheel = [pink, yellow, red, peach, blue, sky, green, mauve] -%}
 {%- elif (accent == "mauve") -%}
   {%- set wheel = [blue, lavender, mauve, pink, maroon, yellow, green, teal] -%}
 {%- elif (accent == "pink") -%}
-  {%- set wheel = [lavender, mauve, pink, maroon, green, yellow, teal, sapphire] -%}
+  {%- set wheel = [mauve, lavender, pink, red, green, yellow, sky, blue] -%}
 {%- elif (accent == "flamingo") -%}
-  {%- set wheel = [mauve, pink, flamingo, maroon, teal, green, sky, blue] -%}
+  {%- set wheel = [maroon, yellow, flamingo, pink, blue, sky, green, mauve] -%}
 {%- elif (accent == "rosewater") -%}
-  {%- set wheel = [maroon, yellow, rosewater, pink, green, sky, blue, mauve] -%}
+  {%- set wheel = [maroon, yellow, rosewater, pink, blue, sky, green, mauve] -%}
 {%- endif -%}
 
 [Main]
-name   = Catppuccin Rainbow {{flavor.name}} {{accent | capitalize}}
+name   = Catppuccin Rainbow {{flavor.name}} {{accent | capitalize}} Dialog
 mode   = {% if (flavor.dark) %}dark{% else %}light{% endif %}
 author = Catppuccin Org
 url    = https://catppuccin.com

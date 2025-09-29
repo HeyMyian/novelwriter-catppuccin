@@ -4,7 +4,7 @@ whiskers:
   matrix:
     - flavor
     - accent
-  filename: "themes/catppuccin_rainbow_{{flavor.identifier}}_{{accent}}.conf"
+  filename: "themes/catppuccin_{{flavor.identifier}}_{{accent}}_dialog.conf"
   hex_format: "#{{r}}{{g}}{{b}}{{z}}"
 ---
 {%- set white = text | mod(color=text, lightness=100) -%}

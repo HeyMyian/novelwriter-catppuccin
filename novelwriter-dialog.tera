@@ -10,11 +10,11 @@ whiskers:
 {%- set white = text | mod(color=text, lightness=100) -%}
 {%- set op1 = if(cond=flavor.dark, t=0.4, f=0.19) -%}
 {%- if (accent == "lavender") -%}
-  {%- set wheel = [sapphire, mauve, lavender, teal, peach, yellow, rosewater, green] -%}
+  {%- set wheel = [sapphire, mauve, lavender, sky, peach, yellow, rosewater, green] -%}
 {%- elif (accent == "blue") -%}
-  {%- set wheel = [green, teal, blue, lavender, mauve, yellow, pink, red] -%}
+  {%- set wheel = [green, teal, blue, lavender, mauve, yellow, rosewater, red] -%}
 {%- elif (accent == "sapphire") -%}
-  {%- set wheel = [green, teal, sapphire, sky, mauve, yellow, pink, maroon] -%}
+  {%- set wheel = [green, pink, sapphire, teal, mauve, yellow, rosewater, red] -%}
 {%- elif (accent == "sky") -%}
   {%- set wheel = [green, pink, sky, blue, peach, yellow, mauve, red] -%}
 {%- elif (accent == "teal") -%}
@@ -22,19 +22,19 @@ whiskers:
 {%- elif (accent == "green") -%}
   {%- set wheel = [sapphire, pink, green, sky, mauve, yellow, rosewater, red] -%}
 {%- elif (accent == "yellow") -%}
-  {%- set wheel = [peach, pink, yellow, maroon, sky, green, blue, mauve] -%}
+  {%- set wheel = [peach, pink, yellow, maroon, mauve, blue, teal, green] -%}
 {%- elif (accent == "peach") -%}
   {%- set wheel = [yellow, pink, peach, flamingo, blue, sky, green, mauve] -%}
 {%- elif (accent == "maroon") -%}
   {%- set wheel = [yellow, pink, maroon, flamingo, blue, sky, green, mauve] -%}
 {%- elif (accent == "red") -%}
-  {%- set wheel = [pink, yellow, red, peach, blue, sky, green, mauve] -%}
+  {%- set wheel = [flamingo, yellow, red, peach, blue, sky, green, mauve] -%}
 {%- elif (accent == "mauve") -%}
   {%- set wheel = [blue, lavender, mauve, pink, maroon, yellow, green, teal] -%}
 {%- elif (accent == "pink") -%}
-  {%- set wheel = [mauve, lavender, pink, red, green, yellow, sky, blue] -%}
+  {%- set wheel = [red, mauve, pink, peach, green, yellow, teal, blue] -%}
 {%- elif (accent == "flamingo") -%}
-  {%- set wheel = [maroon, yellow, flamingo, pink, blue, sky, green, mauve] -%}
+  {%- set wheel = [red, yellow, flamingo, peach, blue, sky, green, mauve] -%}
 {%- elif (accent == "rosewater") -%}
   {%- set wheel = [maroon, yellow, rosewater, pink, blue, sky, green, mauve] -%}
 {%- endif -%}

@@ -81,7 +81,7 @@ button          = {{base | add(saturation=3) | get(key="hex")}}
 buttontext      = default
 brighttext      = base
 highlight       = {{flavor.colors[accent].hex}}
-highlightedtext = base
+highlightedtext = {% if (flavor.dark) %}base{% else %}#ffffff{% endif %}
 link            = blue
 linkvisited     = lavender
 accent          = {{flavor.colors[accent].hex}}
